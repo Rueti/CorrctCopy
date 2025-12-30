@@ -1,0 +1,4 @@
+D:\Klassen\Send_Receive_over_Ethernet\Send_Receive_over_Ethernet\bin\Debug\Send_Receive_over_Ethernet.dll
+D:\Klassen\Send_Receive_over_Ethernet\Send_Receive_over_Ethernet\bin\Debug\Send_Receive_over_Ethernet.pdb
+D:\Klassen\Send_Receive_over_Ethernet\Send_Receive_over_Ethernet\obj\Debug\Send_Receive_over_Ethernet.dll
+D:\Klassen\Send_Receive_over_Ethernet\Send_Receive_over_Ethernet\obj\Debug\Send_Receive_over_Ethernet.pdb

@@ -1,0 +1,8 @@
+﻿  Quellen werden überprüft.
+  Quellen werden remote nach "192.168.1.15" kopiert.
+  Die Architektur wird überprüft.
+  Die Architektur wird überprüft.
+  Remotebuild wird gestartet.
+  Quellen werden kompiliert:
+  main.cpp
+C:\Users\andre\source\repos\Blink1\main.cpp(4,10): error : w:\usr\include\c++\12\wiringPi.h: No such file or directory

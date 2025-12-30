@@ -1,0 +1,15 @@
+﻿<Window x:Class="Correct_Copy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Correct_Copy"
+        mc:Ignorable="d"
+        Title="Copy as you want - without frustration" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}">
+    <Grid>
+        <Button x:Name="SelectButton" Content="Select File" HorizontalAlignment="Left" Margin="40,39,0,0" VerticalAlignment="Top" Width="100" Click="Select_Button_Click"/>
+        <Button x:Name="DestinationButton" Content="Select Destination" HorizontalAlignment="Left" Margin="153,40,0,0" VerticalAlignment="Top" Width="100" Click="Destination_Button_Click" IsEnabled="False"/>
+        <Label Content="Select File and Destination" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="213"/>
+
+    </Grid>
+</Window>

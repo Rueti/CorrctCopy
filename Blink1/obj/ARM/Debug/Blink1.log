@@ -1,0 +1,9 @@
+﻿  Quellen werden überprüft.
+  Quellen werden remote nach "192.168.1.15" kopiert.
+  Die Architektur wird überprüft.
+  Die Architektur wird überprüft.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Application Type\Linux\1.0\Linux.targets(203,5): warning : Die aktuelle Projektarchitektur "ARM" ist mit der Remotesystemarchitektur "ARM64" nicht kompatibel (aarch64). Wechseln Sie im Konfigurations-Manager zur Projektarchitektur "ARM64". Wenn Sie eine Crosskompilierung durchführen, können Sie diese Warnung ignorieren.
+  Remotebuild wird gestartet.
+  Objekte werden verknüpft.
+/usr/bin/ld : error : cannot find -lwiringPi: No such file or directory
+collect2 : error : ld returned 1 exit status

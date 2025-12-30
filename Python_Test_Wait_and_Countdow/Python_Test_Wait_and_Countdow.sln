@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Python_Test_Wait_and_Countdow", "Python_Test_Wait_and_Countdow.pyproj", "{7A2965BF-CA28-4050-B9FE-67383B2DC333}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A2965BF-CA28-4050-B9FE-67383B2DC333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A2965BF-CA28-4050-B9FE-67383B2DC333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAD8C374-A48C-45E2-9AFB-785166955BC2}
+	EndGlobalSection
+EndGlobal

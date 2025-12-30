@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Francis.bmp" />
+    <None Remove="Overview_Pelton.bmp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Francis.bmp" />
+    <Resource Include="Overview_Pelton.bmp" />
+  </ItemGroup>
+
+</Project>
