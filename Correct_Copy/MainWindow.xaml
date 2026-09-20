@@ -1,15 +1,32 @@
-﻿<Window x:Class="Correct_Copy.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Correct_Copy"
-        mc:Ignorable="d"
-        Title="Copy as you want - without frustration" Height="450" Width="800" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}">
-    <Grid>
-        <Button x:Name="SelectButton" Content="Select File" HorizontalAlignment="Left" Margin="40,39,0,0" VerticalAlignment="Top" Width="100" Click="Select_Button_Click"/>
-        <Button x:Name="DestinationButton" Content="Select Destination" HorizontalAlignment="Left" Margin="153,40,0,0" VerticalAlignment="Top" Width="100" Click="Destination_Button_Click" IsEnabled="False"/>
-        <Label Content="Select File and Destination" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="213"/>
-
-    </Grid>
+<Window x:Class="Correct_Copy.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+ Title="Correct Copy · Robocopy einfach bedienen" Width="980" Height="780" MinWidth="760" MinHeight="650" Background="#F3F5F8">
+ <Window.Resources>
+  <Style TargetType="Button"><Setter Property="Padding" Value="12,7"/><Setter Property="Margin" Value="0,0,8,0"/></Style>
+  <Style TargetType="TextBox"><Setter Property="Padding" Value="7"/><Setter Property="VerticalContentAlignment" Value="Center"/></Style>
+ </Window.Resources>
+ <Grid Margin="24">
+  <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+  <StackPanel Margin="0,0,0,20"><TextBlock Text="Correct Copy" FontSize="28" FontWeight="SemiBold"/><TextBlock Text="Quelle wählen. Optionen setzen. Kopierauftrag prüfen." Foreground="#536174" Margin="0,4,0,0"/></StackPanel>
+  <StackPanel x:Name="Configuration" Grid.Row="1">
+   <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+    <TextBox x:Name="SourceBox" TextChanged="InputChanged" ToolTip="Quellordner (absoluter Pfad)"/>
+    <Button Grid.Column="1" Content="Quellordner …" Click="SourceFolder_Click" Margin="8,0,8,0"/><Button Grid.Column="2" Content="Datei …" Click="SourceFile_Click"/>
+   </Grid>
+   <TextBlock Text="Quellordner – dessen Inhalt wird kopiert" Foreground="#536174" Margin="0,3,0,10"/>
+   <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+    <TextBox x:Name="DestinationBox" TextChanged="InputChanged" ToolTip="Zielordner (absoluter Pfad)"/><Button Grid.Column="1" Content="Zielordner …" Click="Destination_Click" Margin="8,0,8,0"/>
+   </Grid>
+   <TextBlock Text="Zielordner" Foreground="#536174" Margin="0,3,0,10"/>
+   <DockPanel><TextBlock Text="Dateien / Muster" VerticalAlignment="Center" Margin="0,0,12,0"/><TextBox x:Name="FilterBox" Text="*.*" Width="330" ToolTip="Mehrere Namen oder Muster mit Semikolon trennen, z. B. *.pdf; *.docx" HorizontalAlignment="Left" TextChanged="InputChanged"/></DockPanel>
+   <WrapPanel Margin="0,16,0,12"><Button Content="Einfach kopieren" Click="Simple_Click"/><Button Content="Mit Unterordnern" Click="Folders_Click"/><Button Content="Langsames Netzwerk" Click="Slow_Click"/><Button Content="Optionen auswählen …" Click="Options_Click"/></WrapPanel>
+   <CheckBox x:Name="PreviewCheck" Content="Testlauf (/L) – nur anzeigen, nichts kopieren oder löschen" IsChecked="True" Checked="InputChanged" Unchecked="InputChanged" Margin="0,0,0,14"/>
+  </StackPanel>
+  <StackPanel Grid.Row="2"><TextBlock Text="Befehlsvorschau" FontWeight="SemiBold"/><TextBox x:Name="CommandBox" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Consolas" Margin="0,6,0,8" MinHeight="65" MaxHeight="110" VerticalScrollBarVisibility="Auto"/></StackPanel>
+  <TextBlock Grid.Row="3" x:Name="ValidationText" Foreground="#AD4318" TextWrapping="Wrap" Margin="0,0,0,10"/>
+  <DockPanel Grid.Row="4" Margin="0,0,0,8"><TextBlock Text="Ausgabe" FontWeight="SemiBold" VerticalAlignment="Center"/><Button Content="Befehl kopieren" Click="CopyCommand_Click" HorizontalAlignment="Right"/></DockPanel>
+  <TextBox Grid.Row="5" x:Name="OutputBox" IsReadOnly="True" AcceptsReturn="True" FontFamily="Consolas" FontSize="12" Background="#142033" Foreground="#E7EDF5" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+  <DockPanel Grid.Row="6" Margin="0,16,0,0"><StackPanel DockPanel.Dock="Right" Orientation="Horizontal"><Button x:Name="CancelButton" Content="Abbrechen" Click="Cancel_Click" IsEnabled="False"/><Button x:Name="StartButton" Content="Testlauf starten" Click="Start_Click" Background="#2563EB" Foreground="White"/></StackPanel><StackPanel VerticalAlignment="Center" Margin="0,0,12,0"><TextBlock x:Name="StatusText" Text="Bereit" TextWrapping="Wrap"/><ProgressBar x:Name="RunProgress" Height="6" Margin="0,6,0,0" Minimum="0" Maximum="100" Visibility="Collapsed" ToolTip="Fortschritt der zuletzt gemeldeten Datei. Der Auftrag ist erst beendet, wenn Robocopy beendet ist."/></StackPanel></DockPanel>
+ </Grid>
 </Window>

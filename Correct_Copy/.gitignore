@@ -1,0 +1,9 @@
+# Generated build output
+bin/
+obj/
+.build-check/
+
+# Local IDE state
+.vs/
+*.user
+*.suo
